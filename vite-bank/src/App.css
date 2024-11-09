@@ -1,0 +1,107 @@
+
+/* App.css */
+
+/* Apply global box-sizing to prevent overflow issues */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set the body to use the full viewport width and prevent overflow */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Container adjustments to align content centrally and remove excess space */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Add padding for small devices */
+}
+
+/* Header */
+header {
+  background-color: #1e40af; /* Tailwind's bg-blue-600 */
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Flexbox for navbar */
+header nav {
+  display: flex;
+  gap: 1rem; /* Add some space between links */
+}
+
+/* Footer */
+footer {
+  background-color: #1e40af;
+  color: #fff;
+  padding: 1.5rem 0;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for buttons and links */
+button,
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3b82f6; /* Tailwind's hover:bg-blue-700 */
+}
+
+/* Remove any scrollbars */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Testimonials styling */
+.testimonials {
+  margin-top: 2rem;
+}
+
+/* Customizing the responsive behavior */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    gap: 0.5rem; /* Reduce space between links */
+  }
+
+  header .text-2xl {
+    font-size: 1.5rem; /* Adjust font size for small screens */
+  }
+}
