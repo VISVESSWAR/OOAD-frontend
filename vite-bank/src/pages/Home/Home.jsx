@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { UserData } from "../../context/UserContext.jsx"; // Assuming UserData contains role info
 
 const Dashboard = () => {
-  const role="admin"; // Assume 'role' is either "user" or "admin"
+  const role="user"; // Assume 'role' is either "user" or "admin"
 
   return (
     <div className="flex h-full justify-center items-center min-h-[75vh] bg-gray-100">
@@ -14,6 +14,9 @@ const Dashboard = () => {
         {/* Display User Dashboard Options */}
         {role === "user" && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+             <Link to="/add" className="bg-purple-600 text-white py-3 rounded-lg text-center hover:bg-purple-700">
+              Add Account
+            </Link>
             <Link to="/account" className="bg-purple-600 text-white py-3 rounded-lg text-center hover:bg-purple-700">
               Account Details
             </Link>
